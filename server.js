@@ -2,8 +2,18 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
+var Pool = required('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
+
+var config{
+    user='sebinduke'
+    database='sebinduke'
+    host='db.imad.hasura-app.io'
+}
+app.get('/test-db',req,res){
+    
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
