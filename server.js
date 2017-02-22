@@ -7,12 +7,23 @@ var app = express();
 app.use(morgan('combined'));
 
 var config{
-    user='sebinduke'
-    database='sebinduke'
-    host='db.imad.hasura-app.io'
+    user='sebinduke',
+    database='sebinduke',
+    host='db.imad.hasura-app.io',
+    password='db-sebinduke-90993'
 }
+
+var pool= new Pool(config);
 app.get('/test-db',req,res){
-    
+    pool.query('SELECT * FROM user',function(err,result){
+        if(err){
+            res(status(500),send(err.tostring()));
+        }
+        else
+        {
+            res(send(JSON.stringify(result)));    
+        }
+    });
 }
 
 app.get('/', function (req, res) {
