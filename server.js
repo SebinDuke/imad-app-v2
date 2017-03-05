@@ -35,13 +35,13 @@ function createTemplate(data){
     var title = data.title;
     var con = data.content;
     
-    var HtmlTemp = '
+    var HtmlTemp = "
     
         <html>
             <head>
                 <link href='/ui/style.css' rel='stylesheet' />
             </head>
-            <body bgcolour="gray">
+            <body bgcolour='gray'>
             <div class='container'>
                 <center>
                 <h1>$(title)</h1>
@@ -51,7 +51,7 @@ function createTemplate(data){
             </div>
             </body>
         </html>
-    ';
+    ";
     return HtmlTemp;
 }
 
