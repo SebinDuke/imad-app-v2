@@ -2,7 +2,9 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
-var Pool = required('pg').Pool;
+var http = require('http');
+var Pool = require('pg').Pool;
+
 var app = express();
 app.use(morgan('combined'));
 
@@ -10,7 +12,8 @@ var config={
     user: 'sebinduke',
     database: 'sebinduke',
     host: 'db.imad.hasura-app.io',
-    password: 'db-sebinduke-90993',
+    port: '5432',
+    password: 'DB_PASSWORD',
     
 };
 
