@@ -31,6 +31,30 @@ app.get('/test-db',function(req,res){
     });
 });
 
+function createTemplate(data){
+    var title = data.title;
+    var con = data.content;
+    
+    var HtmlTemp = '
+    
+        <html>
+            <head>
+                <link href='/ui/style.css' rel='stylesheet' />
+            </head>
+            <body bgcolour="gray">
+            <div class='container'>
+                <center>
+                <h1>$(title)</h1>
+                <hr>
+                $(con)
+                </center>
+            </div>
+            </body>
+        </html>
+    ';
+    return HtmlTemp;
+}
+
 app.get('/article/:a_name', function(req,res){
     
     pool.query("SELECT * FROM article WHERE title = '", req.params.a_name,"'",function(err,result){
