@@ -6,12 +6,13 @@ var Pool = required('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
 
-var config{
-    user='sebinduke',
-    database='sebinduke',
-    host='db.imad.hasura-app.io',
-    password='db-sebinduke-90993';
-}
+var config={
+    user: 'sebinduke',
+    database: 'sebinduke',
+    host: 'db.imad.hasura-app.io',
+    password: 'db-sebinduke-90993',
+    
+};
 
 var pool= new Pool(config);
 
