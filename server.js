@@ -57,7 +57,7 @@ app.get('/article/:anm', function(req,res){
             }
         }*/
         res.send(req.params.anm);
-    });
+    //});
     
 });
 
