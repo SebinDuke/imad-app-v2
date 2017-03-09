@@ -41,7 +41,7 @@ function createTemplate(data){
 
 app.get('/article/:anm', function(req,res){
     
-    pool.query("SELECT * FROM article WHERE title = '($1)';",[req.params.anm],function(err,result){
+    pool.query("SELECT * FROM article WHERE title = ($1);",[req.params.anm],function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
