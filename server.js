@@ -53,7 +53,7 @@ app.get('/article/:anm', function(req,res){
             else{
                 //var ArticleData =result.rows[0];
                 //res.send(createTemplate(ArticleData));
-                result.send(JSON.stringify(result.rows));   
+                res.send(JSON.stringify(result.rows));   
             }
         }
     });
