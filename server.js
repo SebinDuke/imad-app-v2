@@ -36,8 +36,7 @@ function createTemplate(data){
     var con = data.content;
     
     var HtmlTemp = "
-    <html>
-    <head>
+    <html>  <head>
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
     <body bgcolour="light-gray">
