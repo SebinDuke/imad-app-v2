@@ -51,8 +51,9 @@ app.get('/article/:a_name', function(req,res){
                 result(status(404),send("Article requested does not exist."));
             }
             else{
-                var ArticleData =result.rows[0];
-                res.send(createTemplate(ArticleData));
+                //var ArticleData =result.rows[0];
+                //res.send(createTemplate(ArticleData));
+                result.send(JSON.stringify(result.rows));   
             }
         }
     });
