@@ -1,12 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var path = require('path');
+var bodyParser = require('body-parser');
 
-var http = require('http');
 var Pool = require('pg').Pool;
 
 var app = express();
 app.use(morgan('combined'));
+app.use(bodyParser.json());
+
 
 var config={
     user: 'sebinduke',
