@@ -35,7 +35,39 @@ function createTemplate(data){
     var title = data.title;
     var con = data.content;
     
-    var HtmlTemplate = '<html> <head> <link href="/ui/style.css" rel="stylesheet" /></head><body bgcolour="gray"><div class="container"><center><h1> ${data.title} </h1><hr> ${con} </center></div></body></html>';
+    var HtmlTemplate = '
+    <html>
+      <head>
+          <title>
+              ${title}
+          </title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link href="/ui/style.css" rel="stylesheet" />
+      </head> 
+      <body>
+          <div class="container">
+              <div>
+                  <a href="/">Home</a>
+              </div>
+              <hr/>
+              <h3>
+                  ${title}
+              </h3>
+              <div>
+                ${content}
+              </div>
+              <hr/>
+              <h4>Comments</h4>
+              <div id="comment_form">
+              </div>
+              <div id="comments">
+                <center>Loading comments...</center>
+              </div>
+          </div>
+          <script type="text/javascript" src="/ui/article.js"></script>
+      </body>
+    </html>
+    `;
     return HtmlTemplate;
 }
 
