@@ -35,7 +35,7 @@ function createTemplate(data){
     var title = data.title;
     var con = data.content;
     
-    var HtmlTemplate = '
+    var htmlTemplate = '
     <html>
       <head>
           <title>
@@ -66,9 +66,8 @@ function createTemplate(data){
           </div>
           <script type="text/javascript" src="/ui/article.js"></script>
       </body>
-    </html>
-    `;
-    return HtmlTemplate;
+    </html>';
+    return htmlTemplate;
 }
 
 app.get('/article/:anm', function(req,res){
