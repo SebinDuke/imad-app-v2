@@ -32,8 +32,8 @@ app.get('/test-db',function(req,res){
 });
 
 function createTemplate(data){
-    var title = data.title();
-    var con = data.content();
+    var title = data.title;
+    var con = data.content;
     
     var HtmlTemplate = '<html> <head> <link href="/ui/style.css" rel="stylesheet" /></head><body bgcolour="gray"><div class="container"><center><h1> ${data.title} </h1><hr> ${con} </center></div></body></html>';
     return HtmlTemplate;
