@@ -42,7 +42,7 @@ function createTemplate(data){
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="/ui/style.css" rel="stylesheet" /></head>
     
-    <body><div class="container"><div><a href="/">Home</a></div><hr/><h3>${title}</h3><div>${con}</div><hr/> <h4>Comments</h4><div id="comment_form"></div><div id="comments"><center>Loading comments...</center></div></div><script type="text/javascript" src="/ui/article.js"></script></body></html>`;
+    <body><div class="container"><div><a href="/">Home</a></div><hr/><h3>${title}</h3><hr/><div>${con}</div><hr/> <h4>Comments</h4></body></html>`;
     return htmlTemplate;
 }
 
